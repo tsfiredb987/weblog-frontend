@@ -16,10 +16,10 @@ const ArticleList = () => {
     // 定義異步函數
     const fetchArticles = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/articles');
+        // const response = await axios.get('http://localhost:8080/api/articles');
         // 配置 axios 攔截器，自動為每個請求附加 JWT token。
         // 統一處理 API 錯誤（例如 401 未授權）。
-        // const response = await api.get('/articles');
+        const response = await api.get('/articles');
         setArticles(response.data);
       } catch (error) {
         console.error('Error fetching articles:', error);
