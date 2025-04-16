@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container-fluid">
         {/* 品牌標誌 */}
         <NavLink className="navbar-brand" to="/">
-          Weblog
+          Kuang's Weblog
         </NavLink>
         {/* 移動端漢堡選單按鈕 */}
         <button
@@ -31,34 +31,52 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/" exact>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+                to="/"
+              >
                 首頁
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/articles">
+              <NavLink
+                className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+                to="/articles"
+              >
                 文章
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/finance">
+              <NavLink
+                className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+                to="/finance"
+              >
                 財經消息
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/media">
+              <NavLink
+                className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+                to="/media"
+              >
                 媒體播放
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/playground">
+              <NavLink
+                className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+                to="/playground"
+              >
                 待開發
               </NavLink>
             </li>
             {/* 僅在登入時顯示管理選項 */}
             {isAuthenticated && (
               <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" to="/admin">
+                <NavLink
+                  className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+                  to="/admin"
+                >
                   管理
                 </NavLink>
               </li>
@@ -72,7 +90,10 @@ const Navbar = () => {
               </li>
             ) : (
               <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" to="/login">
+                <NavLink
+                  className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+                  to="/login"
+                >
                   登入
                 </NavLink>
               </li>

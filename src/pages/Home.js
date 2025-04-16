@@ -8,7 +8,7 @@ const Home = () => {
       <h1>關於我</h1>
       <div className="card">
         <img
-          src="https://via.placeholder.com/150"
+          src="https://cdn.pixabay.com/photo/2025/02/25/16/36/bird-9431014_1280.jpg"
           alt="Profile"
           className="card-img-top"
           style={{ maxWidth: '150px' }}
